@@ -1,0 +1,11 @@
+@use './colors' as *;
+
+h1,h2, h3, h4, h5 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: $text-color;
+}
+
+p {
+    margin-bottom: 1rem;
+}

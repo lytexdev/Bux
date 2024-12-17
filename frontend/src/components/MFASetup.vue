@@ -31,7 +31,7 @@
                     <ul class="backup-codes">
                         <li v-for="code in backupCodes" :key="code">{{ code }}</li>
                     </ul>
-                    <button class="button" @click="finishSetup">Finish Setup</button>
+                    <button class="button button-primary" @click="finishSetup">Finish Setup</button>
                 </div>
             </div>
         </div>

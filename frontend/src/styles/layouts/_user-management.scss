@@ -1,0 +1,79 @@
+@use '../base/colors' as *;
+
+#user-management {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+
+    .user-list {
+        list-style: none;
+
+        ul {
+            padding: 0;
+        }
+
+        .user-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: #fff;
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+
+            .user-actions {
+                display: flex;
+                gap: 0.5rem;
+            }
+        }
+    }
+
+    .forms-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .add-user-form,
+        .mfa-setup {
+            flex: 1 1 20%;
+            background: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .add-user-form {
+
+
+            .form-group {
+                margin-bottom: 1.25rem;
+
+                label {
+                    display: block;
+                    font-weight: 500;
+                    margin-bottom: 0.5rem;
+                    color: $text-color;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 0.75rem;
+                    border: 1px solid $border-color;
+                    border-radius: 6px;
+
+                    &:focus {
+                        border-color: $primary-color;
+                        outline: none;
+                        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+                    }
+                }
+            }
+
+            .form-actions {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}

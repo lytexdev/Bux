@@ -1,0 +1,27 @@
+@use '../base/colors' as *;
+
+.form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: $text-color;
+        font-weight: 500;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        font-size: 1rem;
+        background: $input-background;
+
+        &:focus {
+            outline: none;
+            border-color: $primary-color;
+            box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+        }
+    }
+}

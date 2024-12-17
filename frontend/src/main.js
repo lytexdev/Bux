@@ -3,11 +3,13 @@ import { createRouter, createWebHistory } from "vue-router"
 import axios from "axios"
 import App from "./App.vue"
 import LoginPage from "./pages/login-page.vue"
+import UserManagementPage from "./pages/user-management-page.vue"
 
 axios.defaults.withCredentials = true
 const app = createApp(App)
 const routes = [
 	{ path: "/login", name: "Login", component: LoginPage },
+	{ path: "/settings/users", name: "UserManagement", component: UserManagementPage },
 ]
 
 const router = createRouter({

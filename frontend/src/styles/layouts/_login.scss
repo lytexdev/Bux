@@ -1,0 +1,98 @@
+@use '../base/colors' as *;
+
+#login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 420px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+
+        .logo {
+            margin-bottom: 1.5rem;
+
+            h1 {
+                font-size: 2rem;
+                font-weight: bold;
+                color: $primary-color;
+                text-transform: uppercase;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+            text-align: left;
+            width: 100%;
+
+            label {
+                font-weight: 600;
+                color: $text-color;
+                margin-bottom: 0.5rem;
+                display: block;
+            }
+
+            input {
+                width: 100%;
+                padding: 0.8rem;
+                font-size: 1rem;
+                border: 1px solid $border-color;
+                border-radius: 6px;
+                transition: border-color 0.3s ease;
+
+                &:focus {
+                    outline: none;
+                    border-color: $primary-color;
+                    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+                }
+            }
+        }
+
+        .button-primary {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            background-color: $primary-color;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+
+            &:hover {
+                background-color: darken($primary-color, 10%);
+                transform: scale(1.03);
+            }
+        }
+
+        .mfa-section {
+            margin-top: 1rem;
+            color: $secondary-color;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

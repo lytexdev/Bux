@@ -1,0 +1,19 @@
+@use '../base/colors' as *;
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+
+    .logo-image {
+        height: 64px;
+        width: 64px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        color: $primary-color;
+        font-weight: bold;
+    }
+}
