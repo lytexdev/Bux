@@ -85,6 +85,19 @@ def delete_user(user_id):
 
     return jsonify({"message": "User not found"}), 404
 
+@user_bp.route("/api/user/status", methods=["GET"])
+def user_status():
+    user_id = session.get("user_id")
+    if not user_id:
+        return jsonify({"logged_in": False}), 200
+
+    user = User.query.get(user_id)
+    if not user:
+        session.pop("user_id", None)
+        return jsonify({"logged_in": False}), 200
+
+    return jsonify({"logged_in": True}), 200
+
 @user_bp.route("/api/login", methods=["POST"])
 def login_user():
     ip = get_client_ip()
