@@ -5,6 +5,7 @@
 @use './components/logo';
 
 @use './layouts/login';
+@use './layouts/settings-header';
 @use './layouts/user-management';
 
 body {

@@ -1,6 +1,6 @@
 <template>
     <section id="user-management">
-        <Logo title="USER MANAGEMENT" />
+        <SettingsHeader/>
 
         <div class="user-list">
             <ul>
@@ -49,11 +49,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
-import { useRouter } from 'vue-router'
-import Logo from '../components/Logo.vue'
 import MFASetup from '../components/MFASetup.vue'
+import SettingsHeader from '../components/SettingsHeader.vue'
 
-const router = useRouter()
 const users = ref([])
 const editMode = ref(false)
 const userForm = ref({
@@ -116,15 +114,6 @@ const deleteUser = async (id) => {
 const resetForm = () => {
     userForm.value = { id: null, username: '', email: '', password: '' }
     editMode.value = false
-}
-
-const logout = async () => {
-    try {
-        await axios.post('/api/logout')
-        router.push('/login')
-    } catch (error) {
-        console.error("Error during logout:", error)
-    }
 }
 
 const cancelEdit = () => {

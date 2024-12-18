@@ -9,7 +9,7 @@
             <div v-else>
                 <div v-if="!verified">
                     <div v-if="!qrCodeUrl">
-                        <button @click="setupTOTP" class="button">Setup TOTP</button>
+                        <button @click="setupTOTP" class="button button-primary">Setup TOTP</button>
                     </div>
 
                     <div v-if="qrCodeUrl">
