@@ -13,14 +13,16 @@
     input {
         width: 100%;
         padding: 0.75rem;
-        border: 1px solid $border-color;
+        outline: none;
+        border: none;
         border-radius: 5px;
         font-size: 1rem;
         background: $input-background;
-
+        color: $text-color;
+        
         &:focus {
             outline: none;
-            border-color: $primary-color;
+            border: 1px solid $primary-color;
             box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
         }
     }

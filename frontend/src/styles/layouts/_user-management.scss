@@ -18,8 +18,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem;
-            background: #fff;
-            border: 1px solid $border-color;
+            background: #181818;
             border-radius: 5px;
             margin-bottom: 1rem;
 
@@ -38,14 +37,12 @@
         .add-user-form,
         .mfa-setup {
             flex: 1 1 20%;
-            background: #fff;
+            background: #181818;
             border-radius: 8px;
             padding: 2rem;
         }
 
         .add-user-form {
-
-
             .form-group {
                 margin-bottom: 1.25rem;
 
@@ -53,20 +50,12 @@
                     display: block;
                     font-weight: 500;
                     margin-bottom: 0.5rem;
-                    color: $text-color;
                 }
 
                 input {
                     width: 100%;
                     padding: 0.75rem;
-                    border: 1px solid $border-color;
                     border-radius: 6px;
-
-                    &:focus {
-                        border-color: $primary-color;
-                        outline: none;
-                        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-                    }
                 }
             }
 
