@@ -8,6 +8,16 @@
     <link rel="stylesheet" crossorigin href="{{ url_for('static', filename='assets/main.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='logo.svg') }}">
     <title>Bux - Budget management</title>
+    <style>
+        @font-face {
+            font-family: 'Rubik';
+            src: url('{{ url_for("static", filename="assets/fonts/Rubik-VariableFont_wght.ttf") }}') format('truetype');
+        }
+
+        * {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
 </head>
 <body>
     <div id="app"></div>
